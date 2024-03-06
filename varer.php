@@ -23,8 +23,8 @@ require "settings/init.php";
     $varer = $db->sql("SELECT * FROM varer");
     foreach ($varer as $vare) {
         ?>
-        <div class="col-12 col-md-6">
-            <div class="card w-100">
+        <div class="col-12 col-md-6 d-flex justify-content-center mt-4">
+            <div class="card w-75">
                 <div class="card-header">
                     <?php
                     echo $vare->vareNavn;

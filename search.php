@@ -20,7 +20,7 @@
         <input type="submit" value="Søg" name="submit">
     </form>
 </div>
-<div class="row justify-content-center">
+<div class="row justify-content-center w-100">
     <?php
 
     $search = $_POST['search'];
