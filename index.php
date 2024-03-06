@@ -24,15 +24,9 @@ require "settings/init.php";
 <div class="mt-3 container d-flex justify-content-center">
     <form action="search.php" method="post">
         <input class="text-center" type="text" name="search" placeholder="Søg">
-        <input type="submit" name="submit">
+        <input type="submit" value="Søg" name="submit">
     </form>
 </div>
-
-<?php
-    $con
-?>
-
-<script src=""></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
