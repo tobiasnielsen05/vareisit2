@@ -9,7 +9,7 @@
     <meta name="author" content="Udgiver">
     <meta name="copyright" content="Information om copyright">
 
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.scss" rel="stylesheet" type="text/css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -37,7 +37,7 @@
     }
 
     $sql = "SELECT * FROM varer WHERE vareNavn LIKE '%$search%'";
-    $image = '<img class="d-block w-75" src="images/viivikingv3.png">';
+    $image = '<img class="d-block w-75" src="images/viiviking.png">';
 
     $result = $conn->query($sql);
 
@@ -47,7 +47,7 @@
         }
     } else {
         echo $image;
-        echo "Vi kunne ikke finde din vare!";
+        echo  "Vi kunne ikke finde din vare!" ;
     }
 
 
