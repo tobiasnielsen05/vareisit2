@@ -63,6 +63,31 @@ require "settings/init.php";
     }
     ?>
 </div>
+<script>
+    var idleTime = 0;
+    var idleTimeout = 30000; // 30 sekunder (i millisekunder)
+
+    // Initialiser inaktivitetsdetektor
+    function resetIdleTime() {
+        idleTime = 0;
+    }
+
+    // Øg inaktivitetstid
+    function incrementIdleTime() {
+        idleTime += 1000; // 1 sekund
+        if (idleTime >= idleTimeout) {
+            // Gå tilbage til start eller udfør den ønskede handling
+            window.location.href = "index.php";
+        }
+    }
+
+    // Lyt efter brugeraktivitet
+    document.addEventListener('mousemove', resetIdleTime);
+    document.addEventListener('keypress', resetIdleTime);
+
+    // Opdater inaktivitetstid hver sekund
+    setInterval(incrementIdleTime, 1000);
+</script>
 </body>
 </html>
 
