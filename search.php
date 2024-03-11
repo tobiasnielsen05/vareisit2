@@ -41,7 +41,6 @@ require "settings/init.php";
     if(!empty($result)){
         foreach ($result as $vare){
             ?>
-
             <div class="col-12 col-md-6 d-flex justify-content-center mt-4">
                 <div class="card w-75 border border-primary border-2 rounded-5 p-3">
                     <div class="card-body">
@@ -56,12 +55,11 @@ require "settings/init.php";
                     </div>
                 </div>
             </div>
-
-            <?php
-        }
+    <?php
+    }
     }else{
-        echo '<img class="d-flex justify-content-center w-100 mt-5" src="images/viiviking.png">';
-        echo  "Vi kunne ikke finde din vare!";
+        echo '<div class="d-flex justify-content-center"><img class="mt-3" src="images/viiviking.png" id="viking"></div>';
+        echo '<h1 class="d-flex justify-content-center mt-3">Vi kunne ikke finde din vare!</h1>';
     }
     ?>
 </div>

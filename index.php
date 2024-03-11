@@ -31,8 +31,8 @@ require "settings/init.php";
         <div class="d-flex justify-content-center mt-3"><input class="btn btn-primary rounded rounded-5 fs-5" type="submit" value="Søg" name="submit"></div>
     </form>
 </div>
-<div class="d-flex justify-content-center container mt-5 w-100">
-    <img src="images/viivikingv3.png">
+<div class="d-flex justify-content-center container mt-3 mb-4 w-100">
+    <img id="viking" src="images/viivikingv3.png">
 </div>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
