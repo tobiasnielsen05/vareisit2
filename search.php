@@ -29,7 +29,7 @@ require "settings/init.php";
         <div class="d-flex justify-content-center mt-3"><input class="btn btn-primary rounded rounded-5 fs-5 btn-lg" type="submit" value="Søg" name="submit""></div>
     </form>
 </div>
-<div class="row justify-content-center w-100">
+<div class="row g-2 w-100">
     <?php
 
     $search = $_POST['search'];
@@ -39,34 +39,30 @@ require "settings/init.php";
     $result = $db->sql($sql, $bind);
 
     if(!empty($result)){
-        foreach ($result as $row){
-            //echo $row->vareNavn." <br> ".$row->varePris." kr.<br>HyldeNr: ".$row->hyldeNr." <br>Sektion: ".$row->vareSektionID."<br><br>";
+        foreach ($result as $vare){
             ?>
 
-            <div class="container col-4 m-3">
-                <div class="row g-4 ">
-                    <div class="">
-                        <div class="border border-primary border-2 rounded-5 p-3">
-                            <h1 id="varer"><?php echo $row->vareNavn; ?></h1>
-                            <p id="varer"><small
-                                        class="text-body-primary">Sektion: <?php echo $row->vareSektionID; ?></small>
-                            </p>
-                            <p id="varer"><small class="text-body-primary">Hylde
-                                    nummer: <?php echo $row->hyldeNr; ?></small></p>
-                            <p id="varer"><small
-                                        class="text-body-primary">Pris: <?php echo $row->varePris; ?> kr.</small></p>
-                        </div>
+            <div class="col-12 col-md-6 d-flex justify-content-center mt-4">
+                <div class="card w-75 border border-primary border-2 rounded-5 p-3">
+                    <div class="card-body">
+                        <h1 id="varer"><?php echo $vare->vareNavn; ?></h1>
+                        <p id="varer">
+                            <small class="text-body-primary">Sektion: <?php echo $vare->vareSektionID; ?></small>
+                        </p>
+                        <p id="varer">
+                            <small class="text-body-primary">Hylde Nummer: <?php echo $vare->hyldeNr; ?></small></p>
+                        <p id="varer">
+                            <small class="text-body-primary">Pris: <?php echo $vare->varePris; ?> kr.</small></p>
                     </div>
                 </div>
             </div>
+
             <?php
         }
     }else{
-        echo '<img class="d-block w-75" src="images/viiviking.png">';
-        echo  "Vi kunne ikke finde din vare!" ;
+        echo '<img class="d-flex justify-content-center w-100 mt-5" src="images/viiviking.png">';
+        echo  "Vi kunne ikke finde din vare!";
     }
-
-
     ?>
 </div>
 </body>
